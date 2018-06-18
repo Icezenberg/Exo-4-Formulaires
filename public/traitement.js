@@ -1,24 +1,39 @@
 /**
  * fonction qui va traiter les valeurs du formulaire
  */
+$(function () {
 
+    $("#add").click(function(e){
+        e.preventDefault();
+        const val1 = $("#champ1").val();   
+        const val2 =  $("#champ2").val();
 
+        $.ajax({
+            url : 'http://127.0.0.1:9000/post',
+            type : 'POST',
+            data : {champ1:val1, champ2:val2},
+            success : function(data){ // code_html contient le HTML renvoyé
+                // const somme = (parseInt(req.body.champ1)+parseInt(req.body.champ2)+"");
+                // console.log(somme);
+                console.log(data);
 
+                $("#resultat").attr("value",data);
 
+                // document.getElementById("resultat").innerHTML = somme;
 
+            }
 
- 
-$("#add").click(function(){
-        // récupérer les données avec des éléments jquery 
-        var val1 = $("#champ1").val();   
-        var val2 =  $("#champ2").val();
-        var somme = parseInt(val1) + parseInt(val2)
-        console.log(val1);
+        });
 
-        // $(".demo").append("somme");
+   
 
-        document.getElementById("resultat").innerHTML = somme;
-    
+    });
 });
+
+
+
+
+
+
 
 
