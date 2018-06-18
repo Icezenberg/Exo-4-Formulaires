@@ -27,7 +27,7 @@ server.get('/', function (req, res) {
 /**
  * Route vers les données du formulaire
  */
-server.post('/post', function(req, res) {
+server.post('/post.html', function(req, res) {
     // exécuté lorsqu'est appelé post.html
     var val1 = parseInt(req.body.champ1);
     var val2 = parseInt(req.body.champ2);

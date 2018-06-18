@@ -9,7 +9,7 @@ $(function () {
         const val2 =  $("#champ2").val();
 
         $.ajax({
-            url : 'http://127.0.0.1:9000/post',
+            url : 'http://127.0.0.1:9000/post.html',
             type : 'POST',
             data : {champ1:val1, champ2:val2},
             success : function(data){ // code_html contient le HTML renvoyé
@@ -20,9 +20,11 @@ $(function () {
                 $("#resultat").attr("value",data);
 
                 // document.getElementById("resultat").innerHTML = somme;
-
+               
+            },
+            error: function(){
+                console.log(toto);
             }
-
         });
 
    
