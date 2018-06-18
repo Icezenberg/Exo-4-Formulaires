@@ -1,6 +1,13 @@
 /**
  * fonction qui va traiter les valeurs du formulaire
  */
+
+
+
+
+
+
+ 
 $("#add").click(function(){
         // récupérer les données avec des éléments jquery 
         var val1 = $("#champ1").val();   
@@ -15,8 +22,3 @@ $("#add").click(function(){
 });
 
 
-// function addNumbers(a, b) {
-//     return a + b; ;
-// }
-
-// x = addNumbers(1, 2);

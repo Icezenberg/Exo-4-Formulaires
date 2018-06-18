@@ -29,12 +29,14 @@ server.get('/', function (req, res) {
  */
 server.post('/post.html', function(req, res) {
     // exécuté lorsqu'est appelé post.html
-    var val1 = req.body.champ1;
-    var val2 = req.body.champ2
+    var val1 = parseInt(req.body.champ1);
+    var val2 = parseInt(req.body.champ2);
 
     console.log(val1,val2);
-    res.writeHead(200);
-    res.write(parseInt(val1)+parseInt(val2));
+    // res.writeHead(200);
+    // res.write(val1+val2);
+    res.send(val1 + val2+"")
+    // res.write(parseInt(val1)+parseInt(val2));
     // res.end();
   });
 
