@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Icezenberg/Exo-4-Formulaires/issues"
   },
-  "homepage": "https://github.com/Icezenberg/Exo-4-Formulaires#readme"
+  "homepage": "https://github.com/Icezenberg/Exo-4-Formulaires#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
 }
